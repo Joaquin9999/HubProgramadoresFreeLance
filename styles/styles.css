@@ -1,0 +1,175 @@
+body {
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar {
+    background-color: #D9D9D9;
+    color: black;
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.menu {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.menu ul li img {
+    width: 30px; 
+    height: 30px;
+    margin-right: 10px; 
+}
+
+.menu ul li:hover {
+    background-color: #444;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar select, .search-bar button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tags button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.tags button:hover {
+    background-color: #ddd;
+}
+
+.programmers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.programmer-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background-color: white;
+}
+
+.programmer-card .profile-picture {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.programmer-card .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.programmer-card .details {
+    flex: 1;
+}
+
+.programmer-card .salary, .programmer-card .date {
+    text-align: right;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .programmer-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .programmer-card .salary, .programmer-card .date {
+        text-align: left;
+        margin-left: 0;
+    }
+}
+
+.salary {
+    font-weight: bold; 
+    position: relative; 
+    z-index: 1; 
+    background-color: white; 
+    padding: 5px; 
+}
+
+.date {
+    position: relative; 
+    z-index: 0; 
+}
